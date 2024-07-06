@@ -85,33 +85,39 @@ class _SecondPageState extends State<SecondPage>
             ),
           ),
           // Center the main content
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              textDirection: TextDirection.rtl,
-              children: [
-                // Apply the fade transition to the Carts widget
-                FadeTransition(
-                  opacity: _opacityAnimation,
-                  child: Carts(
-                    fontSize: 140,
-                    alphabet: 'سـ',
-                    color: Colors.pink.shade200,
-                  ),
+          Column(
+            children: [
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  textDirection: TextDirection.rtl,
+                  children: [
+                    // Apply the fade transition to the Carts widget
+                    FadeTransition(
+                      opacity: _opacityAnimation,
+                      child: Carts(
+                        fontSize: 140,
+                        alphabet: 'سـ',
+                        color: Colors.pink.shade200,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    // Display the text with custom style
+                    Text(
+                      'ـتاره',
+                      style: TextStyle(
+                        fontSize: 222,
+                        color: Colors.blue.shade700,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Vazir",
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(width: 10),
-                // Display the text with custom style
-                Text(
-                  'ـتاره',
-                  style: TextStyle(
-                    fontSize: 222,
-                    color: Colors.blue.shade700,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Vazir",
-                  ),
-                ),
-              ],
-            ),
+              ),
+           SizedBox(height: 300,)
+            ],
           ),
         ],
       ),

@@ -53,6 +53,7 @@ class _FirstPageState extends State<FirstPage> {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       'ـتاره',
